@@ -1,15 +1,14 @@
 package Ceminar;
 
 public class Crossbower extends Hero{
-    public Crossbower(String nameHero){
-        super(  75,
-                75,
-                2,
-                new int[]{10,15}, nameHero);
-                rangeMaxDamage = 4;
+    public Crossbower(String nameHero, int X, int Y){
+        super(  75,75,2,new int[]{10,15}, nameHero, X, Y);
+        rangeMaxDamage = 4;
     }
 
-    int rangeMaxDamage;
+    protected int rangeMaxDamage;
+    protected Vector2 position;
+
 
     @Override
     public String toString(){
