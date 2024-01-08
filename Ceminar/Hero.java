@@ -1,6 +1,8 @@
 package Ceminar;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
 
 public abstract class Hero {
     protected int healt, healtMax, armor;
@@ -23,6 +25,20 @@ public abstract class Hero {
         System.out.println();
     }
 
-
+    public float findMinDistance(ArrayList<Hero> enemys){
+        ArrayList<Float> distances = new ArrayList<>();
+        enemys.forEach(n-> distances.add(position.rangeToEnemy(n.position)));
+        float minDistance = Collections.min(distances);
+        return minDistance;
+    }
+    public Hero findNearestEnemy(ArrayList<Hero> enemys){
+        Hero heroTMP = enemys.get(0);
+        for (int i = 0; i < enemys.size(); i++) {
+            if (this.position.rangeToEnemy(enemys.get(i).position) < this.position.rangeToEnemy(heroTMP.position)){
+                heroTMP = enemys.get(i);
+            }
+        }
+        return heroTMP;
+    }
 }
 

@@ -12,4 +12,6 @@ public class Peasant extends Hero{
     public String toString(){
         return "Крестьянин: " +nameHero+ " " + "Здоровье: " + healt+ "/"+healtMax+ " Броня: " +armor;
     }
+
+    
 }

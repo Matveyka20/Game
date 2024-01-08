@@ -7,12 +7,12 @@ import java.util.Random;
 public class Cem {
     public static void main(String[] args) {
 
-        herosWrite = generadComand(0,0);
-        herosBlack = generadComand(3,9);
+        // herosWrite = generadComand(0,0);
+        // herosBlack = generadComand(3,9);
 
-        herosWrite.forEach(n->System.out.println(n.toString()));
-        System.out.println("***********");
-        herosBlack.forEach(n->n.printEnemyDis(herosWrite));
+        // herosWrite.forEach(n->System.out.println(n.toString()));
+        // System.out.println("***********");
+        // herosBlack.forEach(n->n.printEnemyDis(herosWrite));
     }
 
     static ArrayList<Hero> herosWrite = new ArrayList<>();
